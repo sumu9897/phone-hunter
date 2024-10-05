@@ -9,8 +9,36 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-  <header></header>
-  <main></main>
+  <header>
+    <h2 class="text-6xl">Hunting Phone</h2>
+  </header>
+  <main class="container mx-auto mt-8">
+    <section class="bg-gray-100 p-4 m-4">
+      <input id="search-field" type="text" placeholder="Search.." class="input inset-bordered w-full max-w-xs"/>
+      <button onclick="handleSearch()" class="btn btn-accent">Search</button>
+    </section>
+    <section>
+      <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+        <!-- <div class="card bg-gray-100 w-96 shadow-xl">
+          <figure>
+            <img
+              src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+              alt="Shoes" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Shoes!</h2>
+            <p>If a dog chews shoes whose shoes does he choose?</p>
+            <div class="card-actions justify-end">
+              <button class="btn btn-primary">Buy Now</button>
+            </div>
+          </div>
+        </div> -->
+      </div>
+      <div id="show-all-container" class="hidden">
+        <button class="btn btn-accent">show all</button>
+      </div>
+    </section>
+  </main>
   <footer></footer>
   <script src="js/phone.js"></script>
 </body>
