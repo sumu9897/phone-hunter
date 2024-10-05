@@ -9,7 +9,8 @@ const loadAllPhones = async(status, searchText) => {
 
     const response = await fetch(`https://openapi.programming-hero.com/api/phones?search=${searchText?searchText:"iphone"}`);
     const data = await response.json();
-    console.log(data)
+    //console.log(data)
+    
     if(status){
         displayAllPhone(data.data);
     }else{
@@ -22,6 +23,7 @@ const loadAllPhones = async(status, searchText) => {
 }
 
 const displayAllPhone =(phones) =>{
+    
     const phonesContainer = document.getElementById("phones-container");
     // for(phone of phones){
     //     console.log(phone)
@@ -62,6 +64,7 @@ const handleSearch = () => {
     setTimeout(() => {
         loadAllPhones(false,searchText);
     }, 3000);
+
 }
 
 const handleShowAll =()=>{
